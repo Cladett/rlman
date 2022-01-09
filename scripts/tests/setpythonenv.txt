@@ -1,0 +1,59 @@
+import gym
+import numpy as np
+import dVRL_simulator
+from dVRL_simulator.PsmEnv import PSMEnv
+from dVRL_simulator.vrep.simObjects import table, obj, target, kidney, rail
+import transforms3d.euler as euler
+import transforms3d.quaternions as quaternions
+
+env_pick = gym.make("dVRLPick-v0") 
+s = env_pick.reset() ; env_pick.render()
+
+a = np.array([0,0,-1,1]) ; s, r, _, info = env_pick.step(a) 
+
+# Claudia: how i need to change the action if i randomize obj initial position
+a = np.append(np.clip(10*(s['observation'][-3:] - s['observation'][0:3]), -1, 1), [1]) ; s, r, _, info = env_pick.step(a) 
+
+a = np.array([0,0,0,-0.6]) ; s, r, _, info = env_pick.step(a)
+
+a = np.append(np.clip(10*(s['desired_goal'] - s['observation'][-3:]), -1, 1), [-0.6])  ; s, r, _, info = env_pick.step(a)
+
+# If I wanna used the loops
+for _ in range(40):
+    #a = np.array([0,0,-1,1]) ; s,r,_,info = env_pick.step(a)
+    a = np.append(np.clip(10*(s['observation'][-3:] - s['observation'][0:3]), -1, 1), [1]) ; s, r, _, info = env_pick.step(a) 
+
+for _ in range(2):
+    a = np.array([0,0,0,-0.6]) ; s,r,_,info = env_pick.step(a)
+
+
+for _ in range(50):
+    a = np.append(np.clip(10*(s['desired_goal'] - s['observation'][-3:]), -1, 1), [-0.6]) ; s,r,_,info = env_pick.step(a) 
+
+# Loop of random initial position
+for _ in range(20):
+    s = env_pick.reset() ; env_pick.render()
+    import time
+    time.sleep(1)
+	
+
+# FOR THE PICKPLACE task with the kidney                                                                                                          
+
+for _ in range(60):
+	a = np.append(np.clip(10*(s['observation'][-3:] - s['observation'][0:3]), -1, 1), [1]); s, r, _, info = env.step(a)
+	time.sleep(0.1)
+
+for _ in range(2):
+	a = np.array([0,0,0,-0.6]) ; s,r,_,info = env.step(a)  
+	time.sleep(0.1)
+
+for _ in range(88):	
+	a = np.append(np.clip(10*(s['desired_goal'] - s['achieved_goal']), -1, 1), [-0.6]) ; s,r,_,info = env.step(a)
+	time.sleep(0.1)
+
+
+
+# FOR THE REACH OF THE KIDNEY
+a = np.append(np.clip(10*(s['desired_goal'][-3:] - s['observation'][0:3]), -1, 1), [0]);
+
+    
