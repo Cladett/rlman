@@ -34,4 +34,4 @@ ADD dVRK-oneArm-pick_rail.ttt /opt/scene.ttt
 #ADD dVRK-oneArm-pick_kid_target.ttt /opt/scene.ttt
 
 # Run CoppeliaSim
-CMD $COPPELIASIM_ROOT_DIR/coppeliaSim -s -q /opt/scene.ttt
+CMD $COPPELIASIM_ROOT_DIR/coppeliaSim -s -h -q /opt/scene.ttt
