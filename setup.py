@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import setuptools 
 
-setuptools.setup(name='dVRL_simulator',
+setuptools.setup(name='rlman',
                  version='0.0.1',
                  description='A software to implement RL method using baselines.',
                  author='Claudia D\'Ettorre',
