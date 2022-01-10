@@ -44,5 +44,5 @@ CMD $COPPELIASIM_ROOT_DIR/coppeliaSim -s -h -q /opt/scene.ttt
 Everytime a modification gets done to the dockerfiles, run the following script to build the images:
 
 ```
-python build_images.py --input-dir path/to/docker_files
+python script/build_images.py --input-dir path/to/docker_files
 ```
