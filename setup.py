@@ -15,7 +15,7 @@ setuptools.setup(name='rlman',
                      'dVRL_simulator.vrep' : 'dVRL_simulator/vrep',
                  },
                  install_requires=[
-                     'gym',
+                     'gym==0.15.7',
                      'numpy',
                      'docker',
                      'matplotlib',
