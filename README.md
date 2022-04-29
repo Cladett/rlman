@@ -21,7 +21,7 @@ To install virtualenv:
 
 Virtualenvs are folders that have copies of python executable and all python packages. To create a virtualenv called rlman with python3.7 run:
 
-`virtualenv --python=python3.7 /path/to/rlman`
+`virtualenv --python=python3.8 /path/to/rlman`
 
 To activate the environment:
 
