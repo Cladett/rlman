@@ -1,1 +1,0 @@
-Logging to ./logs/PickPlace_kidney_12.04.21

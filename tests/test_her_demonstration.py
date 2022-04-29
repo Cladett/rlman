@@ -1,7 +1,7 @@
 """
 @brief   This script is used to test a training with DDPG+HER of the pick & 
          place task using demonstrations recorded on the simulation enviroment. 
-@author  Claudia D'Ettorre
+@author  Claudia D'Ettorre (c.dettorre@ucl.ac.uk)
 @date    28 Aug 2020
 """
 import argparse                                                                                                                                                    

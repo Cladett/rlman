@@ -1,5 +1,5 @@
 """
-@brief    Script use to test if the environment are run correctly. 
+@brief    Script use to test if the environment are running correctly. 
           The script runs the Coppeliasim container with the specified
           environment id and executes twice a sample task for each of the selected
           environment. 
@@ -18,14 +18,6 @@ class Demo():
         # Store params
         self.env_id = env_id
 
-        #import pudb; pudb.set_trace()
-        # Initialise data structures
-        # self.episode_returns = []
-        # self.actions = []
-        # self.obs = []
-        # self.rewards = []
-        # self.episode_starts = []
-        
         # Initialise gym env and wrapping it for having obs as single array 
         # of floats instead of a dictionary. Selecting the env based on the task
         if self.env_id == 'dVRLReach-v0':
@@ -53,78 +45,6 @@ class Demo():
             self.GRASP_STEPS = 5 
         if self.env_id == 'dVRLPickPlaceTarget-v0':
             self.env_dvrk = gym.make("dVRLPickPlaceTarget-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-            ###############################################################
-        if self.env_id == 'dVRLPickPlaceTargetE1-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE1-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetE2-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE2-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetE3-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE3-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetE4-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE4-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetE5-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE5-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetE6-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetE6-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE1-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE1-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE2-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE2-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE3-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE3-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE4-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE4-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE5-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE5-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEvalE6-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEvalE6-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-            ###############################################################
-        if self.env_id == 'dVRLPickPlaceTargetObs-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetObs-v0")
-            # Defining number of timesteps for each part of the task 
-            self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
-            self.GRASP_STEPS = 5 
-        if self.env_id == 'dVRLPickPlaceTargetEval-v0':
-            self.env_dvrk = gym.make("dVRLPickPlaceTargetEval-v0")
             # Defining number of timesteps for each part of the task 
             self.APPROACH_STEPS = 40  # rail ee start from pos [0, 0, -0.07]
             self.GRASP_STEPS = 5 
