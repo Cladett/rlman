@@ -1,6 +1,10 @@
 # rlman: RL environment for organ manipulation compatible with the dVRK
 Reinforcement Learning environments for training surgical sub-tasks using the dVRK.
 
+## Publication
+Presented at IPCAI 2022 and published on the International Journal of Computer Assisted Radiology and Surgery (IJCARs), 2022.
+![Alt text](/images/pickplace.png?raw=true "Optional Title")
+
 ## Description
 Simulation environment for training RL agents using [OpenAI Baselines](https://github.com/openai/baselines)
 
