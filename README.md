@@ -3,6 +3,7 @@ Reinforcement Learning environments for training surgical sub-tasks using the dV
 
 ## Publication
 Presented at IPCAI 2022 and published on the International Journal of Computer Assisted Radiology and Surgery (IJCARs), 2022.
+Article DOI: 10.1007/s11548-022-02630-2
 ![Alt text](/images/pickplace.png?raw=true "Optional Title")
 
 ## Description
